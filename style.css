@@ -1,0 +1,183 @@
+/* Global Styles */
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #aaa;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #111, #333);
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.hero .btn {
+    background: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.hero .btn:hover {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* Produtos */
+.produtos {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.produto {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.produto img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.produto button {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.produto button:hover {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* Sobre */
+.sobre, .contato {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+}
+/* Responsividade para Tablets (768px ou menores) */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsividade para Smartphones (480px ou menores) */
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .grid {
+        flex-direction: column;
+    }
+
+    .produto {
+        width: 90%;
+    }
+
+    .sobre, .contato {
+        padding: 30px 10px;
+    }
+
+    .contato form input, 
+    .contato form textarea, 
+    .contato form button {
+        max-width: 100%;
+    }
+}
